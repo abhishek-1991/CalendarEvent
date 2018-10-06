@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CalendarEvents</string>
+    <string name="get_events">Get Events</string>
+</resources>
