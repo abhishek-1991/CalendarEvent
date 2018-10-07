@@ -6,23 +6,152 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:padding="8dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/eventTitle"
+                android:padding="3dp"
+                android:text="Event" />
+
+            <TextView
+                android:id="@+id/showTitle"
+                android:layout_gravity="right"
+                android:padding="3dp"
+                android:text="Event Title" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/eventTime"
+                android:padding="3dp"
+                android:text="Time" />
+
+            <TextView
+                android:id="@+id/showTime"
+                android:layout_gravity="right"
+                android:padding="3dp"
+                android:text="Event Time" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/eventLoc"
+                android:padding="3dp"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/showLoc"
+                android:layout_gravity="right"
+                android:padding="3dp"
+                android:text="Event Location" />
+        </TableRow>
+
+    </TableLayout>
+
     <TextView
+        android:id="@+id/showHops"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/showDetails"
+        app:layout_constraintStart_toEndOf="@+id/showHops"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/showDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="70dp"
-        android:onClick="buttonClick"/>
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="showDetails"
+        android:text="Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TableLayout
+        android:id="@+id/showTextDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showDetails">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/deptTime"
+                android:padding="3dp"
+                android:text="Departure Time" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/deptStop"
+                android:padding="3dp"
+                android:text="Departure" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/destStop"
+                android:padding="3dp"
+                android:text="Destination" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/destTime"
+                android:padding="3dp"
+                android:text="Destination Time" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/totTime"
+                android:padding="3dp"
+                android:text="Total Time" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/busName"
+                android:padding="3dp"
+                android:text="Bus Name" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/busNum"
+                android:padding="3dp"
+                android:text="Bus Number" />
+        </TableRow>
+    </TableLayout>
 
 
 
